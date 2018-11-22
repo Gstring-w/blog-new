@@ -1,0 +1,39 @@
+body {
+  background-color: #ccc !important;
+  .web-header {
+    height: 228px;
+    padding: 0;
+    background-color: #ccc !important;
+    &-content {
+      height: 100%;
+      background-color: #ccc;
+    }
+  }
+  .web-wrapper-content-right {
+    background: #ccc;
+  }
+}
+.ant-layout {
+  background-color: #ccc !important;
+}
+@media screen and (max-width: 860px) {
+  .web-wrapper-content-right {
+    display: none;
+  }
+
+  .web-wrapper-content-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .List-wrapper-item {
+      width: 500px;
+      overflow: hidden;
+      .ant-list-item-extra {
+        display: none;
+      }
+      .ant-list-item-main {
+        width: 30vw;
+      }
+    }
+  }
+}

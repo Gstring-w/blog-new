@@ -1,0 +1,30 @@
+.carousel-wrapper {
+  height: 180px;
+  // background-color: #364d79;
+  &-item1,
+  &-item2,
+  &-item3,
+  &-item4 {
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("http://localhost:4000/imgs/top1.jpg");
+  }
+  &-item2 {
+    background-image: url("http://localhost:4000/imgs/top2.jpg");
+  }
+  &-item3 {
+    background-image: url("http://localhost:4000/imgs/top3.jpg");
+  }
+  &-item4 {
+    background-image: url("http://localhost:4000/imgs/top4.jpg");
+  }
+  &-item5 {
+    background-image: url("http://localhost:4000/imgs/top5.jpg");
+  }
+  .active {
+    border-color: rgb(24, 144, 255);
+    color: rgb(24, 144, 255);
+  }
+}

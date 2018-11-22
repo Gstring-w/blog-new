@@ -1,0 +1,24 @@
+.user {
+  text-align: left;
+}
+.user-content {
+  position: relative;
+}
+.user-content-tips {
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #b5b5fa;
+  color: #b5b5fa;
+  border-radius: 3px;
+  line-height: 26px;
+  text-align: center;
+  opacity: 0.4;
+  transform: rotateZ(-30deg);
+}
+.user-content .no {
+  border-color: #fcb095 !important;
+  color: #fcb095 !important;
+}

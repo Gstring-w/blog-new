@@ -1,0 +1,38 @@
+body {
+  background-color: #ccc !important;
+}
+body .web-header {
+  height: 228px;
+  padding: 0;
+  background-color: #ccc !important;
+}
+body .web-header-content {
+  height: 100%;
+  background-color: #ccc;
+}
+body .web-wrapper-content-right {
+  background: #ccc;
+}
+.ant-layout {
+  background-color: #ccc !important;
+}
+@media screen and (max-width: 860px) {
+  .web-wrapper-content-right {
+    display: none;
+  }
+  .web-wrapper-content-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .web-wrapper-content-center .List-wrapper-item {
+    width: 500px;
+    overflow: hidden;
+  }
+  .web-wrapper-content-center .List-wrapper-item .ant-list-item-extra {
+    display: none;
+  }
+  .web-wrapper-content-center .List-wrapper-item .ant-list-item-main {
+    width: 30vw;
+  }
+}

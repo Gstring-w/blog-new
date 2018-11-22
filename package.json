@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.10.4",
+    "axios": "^0.18.0",
+    "braft-editor": "^2.1.29",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "socket.io": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +29,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "css-loader": "^1.0.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1"
+  }
 }

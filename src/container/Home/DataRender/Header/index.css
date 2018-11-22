@@ -1,0 +1,29 @@
+.carousel-wrapper {
+  height: 180px;
+}
+.carousel-wrapper-item1,
+.carousel-wrapper-item2,
+.carousel-wrapper-item3,
+.carousel-wrapper-item4 {
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("http://localhost:4000/imgs/top1.jpg");
+}
+.carousel-wrapper-item2 {
+  background-image: url("http://localhost:4000/imgs/top2.jpg");
+}
+.carousel-wrapper-item3 {
+  background-image: url("http://localhost:4000/imgs/top3.jpg");
+}
+.carousel-wrapper-item4 {
+  background-image: url("http://localhost:4000/imgs/top4.jpg");
+}
+.carousel-wrapper-item5 {
+  background-image: url("http://localhost:4000/imgs/top5.jpg");
+}
+.carousel-wrapper .active {
+  border-color: #1890ff;
+  color: #1890ff;
+}

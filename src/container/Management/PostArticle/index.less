@@ -1,0 +1,49 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    text-align: left;
+  }
+  &-header {
+    text-align: left;
+    &-title {
+      display: flex;
+      align-items: center;
+      &-right {
+        flex: 1;
+      }
+      &-left {
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+    }
+  }
+  &-body {
+    text-align: left;
+    margin-top: 20px;
+    &-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  }
+  &-tags {
+    text-align: left;
+    margin-top: 20px;
+  }
+  &-submit {
+    margin-top: 20px;
+    display: flex;
+    width: 40vw;
+    justify-content: space-around;
+    &-content {
+      width: 652px;
+      height: 286px;
+      border: 1px solid #ccc;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      overflow-y: auto;
+    }
+  }
+}

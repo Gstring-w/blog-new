@@ -1,0 +1,18 @@
+.article-details-control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.article-details-content p {
+  text-indent: 2em;
+}
+.homeDetails {
+  width: 548px;
+  float: right;
+  background-color: #fff;
+  padding: 10px 20px;
+}

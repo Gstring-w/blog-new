@@ -1,0 +1,49 @@
+.post {
+  display: flex;
+  flex-direction: column;
+}
+.post h3 {
+  text-align: left;
+}
+.post-header {
+  text-align: left;
+}
+.post-header-title {
+  display: flex;
+  align-items: center;
+}
+.post-header-title-right {
+  flex: 1;
+}
+.post-header-title-left {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.post-body {
+  text-align: left;
+  margin-top: 20px;
+}
+.post-body-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.post-tags {
+  text-align: left;
+  margin-top: 20px;
+}
+.post-submit {
+  margin-top: 20px;
+  display: flex;
+  width: 40vw;
+  justify-content: space-around;
+}
+.post-submit-content {
+  width: 652px;
+  height: 286px;
+  border: 1px solid #ccc;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
