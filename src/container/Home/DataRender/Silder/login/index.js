@@ -1,24 +1,36 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { Form, Icon, Input, Button, Checkbox, message } from "antd";
-import { LoginUser } from "../../../../../sagas/login";
+import { Form, Icon, Input, Button, Checkbox, notification } from "antd";
+import { SetCookie } from "../../../../../reducers/action/windowScroll";
+import { postLoginData } from "../../../../../axios/index";
 import "./index.css";
 class Login extends Component {
   state = {
     info: "登录成功"
   };
-  info = () => {
-    let { cookie } = this.props;
-    message.destroy();
-    message.loading("正在登录");
-  };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.form.validateFields((err, values) => {
+    this.props.form.validateFields(async (err, values) => {
       if (!err) {
         const { userName, password, remember } = values;
-        this.props.LoginUser(values, "login");
+        try {
+          let response = await postLoginData(values);
+          console.log(response);
+          // document.setCookie
+          notification["success"]({
+            message: "登录成功！"
+          });
+          this.props.SetCookie(response.data[0].username);
+          document.cookie = `user_id=${response.data[0].username}`;
+          this.props.onLogined();
+        } catch (error) {
+          console.log(error);
+          notification["error"]({
+            message: "登录失败！",
+            description: "请检测密码和用户名是否正确！"
+          });
+        }
       }
     });
   };
@@ -81,5 +93,5 @@ class Login extends Component {
 const WrappedNormalLoginForm = Form.create()(Login);
 export default connect(
   store => store,
-  { LoginUser }
+  { SetCookie }
 )(WrappedNormalLoginForm);

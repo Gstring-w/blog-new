@@ -12,8 +12,9 @@ class TopBar extends Component {
   };
   handleLoginText = () => {
     let { cookie } = this.props;
+
     if (cookie) {
-      return `${cookie.data[0].username}`;
+      return `${cookie}`;
     } else {
       return `登录`;
     }

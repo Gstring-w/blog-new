@@ -11,10 +11,7 @@ import ToTop from "../../../../components/ToTop";
 import Logined from "../../../../components/Logined";
 class Silder extends Component {
   state = {
-    initialization_data: [
-      { content: "登录", to: "react/login" },
-      { content: "注册", to: "react/registered" }
-    ]
+    cookie: false
   };
   handleClickLogin() {
     this.props.changeLogin(true);
@@ -22,13 +19,18 @@ class Silder extends Component {
   handleClickRegisered() {
     this.props.changeLogin(false);
   }
+  onLogined = () => {
+    this.setState({
+      cookie: true
+    });
+  };
   handleStatus = () => {
     const { isChangeLogin, isShowToTop, cookie } = this.props;
     if (cookie) {
       return <Logined />;
     } else {
       if (isChangeLogin) {
-        return <Login />;
+        return <Login onLogined={this.onLogined} />;
       } else {
         return <Registered />;
       }
@@ -73,14 +75,13 @@ class Silder extends Component {
             className="TopBar-wrapper-item active"
             onClick={this.handleClickRegisered.bind(this)}
           >
-            用户：{cookie.data[0]["username"]}
+            用户：{cookie}
           </Menu.Item>
         </Menu>
       );
     }
   };
   renderInitialization() {
-    const { initialization_data } = this.state;
     const { isShowToTop } = this.props;
     return (
       <div className="Silder">

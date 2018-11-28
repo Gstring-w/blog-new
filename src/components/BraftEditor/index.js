@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import BraftEditor from "braft-editor";
 import saveData from "../../reducers/action/saveEditorHtml";
 import { connect } from "react-redux";
-import { message } from "antd";
 import "braft-editor/dist/index.css";
 class Brafteditor extends Component {
   state = {

@@ -1,0 +1,40 @@
+.hot-wrapper {
+  position: absolute;
+  margin: 0 auto;
+  top: 400px;
+  left: 20%;
+}
+.hot-wrapper-item {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 180px;
+  justify-content: space-between;
+}
+.hot-wrapper-item-span {
+  font-size: 8px;
+  width: 30px;
+  display: block;
+  margin-left: -5px;
+}
+.hot-wrapper-item > div:hover {
+  color: #1890ff;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .hot-wrapper {
+    position: absolute;
+    margin: 0 auto;
+    top: 400px;
+    left: 14%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hot-wrapper {
+    position: absolute;
+    margin: 0 auto;
+    top: 400px;
+    left: 8%;
+  }
+}

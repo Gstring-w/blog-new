@@ -17,3 +17,10 @@ export const showPopover = flag => {
     isShowPopover: flag
   };
 };
+
+export const SetCookie = flag => {
+  return {
+    type: "login",
+    cookie: flag
+  };
+};

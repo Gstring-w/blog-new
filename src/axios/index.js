@@ -29,6 +29,17 @@ export const getData = url => {
   });
 };
 
+export const postLoginData = values => {
+  const basePath = "http://localhost:4000/login";
+  return axios
+    .post(basePath, JSON.stringify(values), {
+      headers: { "Content-Type": "application/json" }
+    })
+    .then(response => {
+      return response;
+    });
+};
+
 export const getManagementData = totol => {
   const basePath = "http://localhost:4000/management/post?totol=" + totol;
   return axios.get(basePath).then(response => {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { BackTop } from "antd";
 import "./index.css";
 
 export default class ToTop extends Component {
@@ -8,9 +8,8 @@ export default class ToTop extends Component {
   };
   render() {
     return (
-      <div className="toTop" onClick={this.handleClick}>
-        <span className="iconfont icon-huidaodingbu toTop-icon" />
-        <span className="toTop-content">回到顶部</span>
+      <div>
+        <BackTop />
       </div>
     );
   }

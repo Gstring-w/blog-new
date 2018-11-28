@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
 import HeaderBlog from "./DataRender/Header";
 import TopBar from "./DataRender/TopBar";
 import DataRender from "./DataRender";
-import DataDetails from "./DataDetails";
 
 import throttle from "../../utils/throttle";
 import {

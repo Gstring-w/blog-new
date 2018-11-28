@@ -33,6 +33,25 @@ export class ShowDetails extends Component {
           </Affix>
         )}
 
+        <Affix offsetTop={3}>
+          <div>
+            <Button
+              size="small"
+              icon="caret-left"
+              onClick={this.props.hideDetails}
+              className="back-button"
+            >
+              返回
+            </Button>
+          </div>
+        </Affix>
+        <div className="article-details1">
+          <div className="article-details1-avatar" />
+          <div>
+            <div className="article-details1-title">{this.props.author}</div>
+            <div className="article-details1-time">{this.props.time}</div>
+          </div>
+        </div>
         <div
           className="article-details-content"
           dangerouslySetInnerHTML={{ __html: this.props.content }}

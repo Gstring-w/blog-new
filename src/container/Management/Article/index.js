@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getManagementData } from "../../../axios/index";
-import { List, Avatar, Card, Skeleton, Icon, message } from "antd";
+import { Avatar, Card, message } from "antd";
 import RenderWait from "../../../components/renderWaitData";
 import ShowDetailsArticle from "../../../components/ShowDetailsArticle";
 import "./index.css";
 export class Article extends Component {
   state = {
-    data: "",
     showDetails: true,
     selectIndex: 0
   };

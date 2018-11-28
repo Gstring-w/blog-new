@@ -4,6 +4,7 @@ import Home from "./container/Home";
 import Management from "./container/Management";
 
 import "antd/dist/antd.css";
+import EmptyPage from "./components/EmptyPage";
 export default class App extends Component {
   render() {
     return (
@@ -11,6 +12,8 @@ export default class App extends Component {
         <Switch>
           <Route path="/home" exact component={Home} />
           <Route path="/mangement" component={Management} />
+          <Route path="/404" component={EmptyPage} />
+          <Redirect to="/404" />
         </Switch>
       </div>
     );

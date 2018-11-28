@@ -6,6 +6,8 @@ import { getHomeData } from "../../../axios/index";
 import ShowDetailsArticle from "../../../components/ShowDetailsArticle";
 import "./index.css";
 import Comment from "../../../components/comment";
+import Widget from "./Widget";
+import StarAndHot from "../../../components/StarAndHot";
 export default class DataRender extends Component {
   state = {
     isShowDetails: false,
@@ -25,6 +27,11 @@ export default class DataRender extends Component {
       isShowDetails: true
     });
   };
+  hideDetails = () => {
+    this.setState({
+      isShowDetails: false
+    });
+  };
   render() {
     const { data_content, isShowDetails, selectIndex } = this.state;
     const { Sider, Content } = Layout;
@@ -39,10 +46,12 @@ export default class DataRender extends Component {
               />
             ) : (
               <React.Fragment>
+                {!!isShowDetails && <StarAndHot />}
                 <ShowDetailsArticle
                   isShowTop={false}
                   author={!!data_content ? data_content[selectIndex].user : ""}
                   hideDetails={this.hideDetails}
+                  time={!!data_content ? data_content[selectIndex].time : ""}
                   content={
                     !!data_content ? data_content[selectIndex].content : ""
                   }
@@ -55,7 +64,7 @@ export default class DataRender extends Component {
           </Content>
           <Sider className="web-wrapper-content-right" width="35%">
             <SilderBlog />
-            {!!isShowDetails && "控件"}
+            {!!isShowDetails && <Widget />}
           </Sider>
         </Layout>
       </div>

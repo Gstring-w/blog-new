@@ -20,8 +20,10 @@ export class PostArticleBlog extends Component {
     message.destroy();
     let { text } = this.state;
     let { post_article_data } = this.props;
-    console.log(post_article_data);
-    let obj = { text, post_article_data };
+    let user = document.cookie.split("=")[1];
+
+    let obj = { text, post_article_data, user };
+    console.log(obj);
     this.props.PostArticle(obj, "post");
     message.info("发布成功");
   };
